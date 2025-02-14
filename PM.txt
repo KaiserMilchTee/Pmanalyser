@@ -1,0 +1,26 @@
+# Email Account
+REGEX:[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}
+#  Plaintext master password greater than 12 character
+#REGEX:(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{11,}
+# 32-character Hex Salt
+REGEX:\b[a-fA-F0-9]{32}\b 
+# 64-character Hex Salt
+REGEX:\b[a-fA-F0-9]{64}\b 
+# 24-character Base64 Salt
+REGEX:\b[A-Za-z0-9+/]{22}={0,2}\b 
+# 32-character Base64 Salt
+REGEX:\b[A-Za-z0-9+/]{43}={0,1}\b
+# 44-character Base64 Salt
+REGEX:\b[A-Za-z0-9+/]{64}\b
+# Iteration Count
+REGEX:\biterations?:?\s*\d{3,6}\b
+# 64-character Hex Key
+REGEX:\b[0-9a-fA-F]{64}\b    
+# 128-character Hex Key
+REGEX:\b[0-9a-fA-F]{128}\b   
+# 44-character Base64 Key
+REGEX:\b[A-Za-z0-9+/]{44}={0,2}\b    
+# 88-character Base64 Key
+REGEX:\b[A-Za-z0-9+/]{88}={0,2}\b 
+STRING:derived_key
+STRING:master_key
